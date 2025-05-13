@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <style>
+        *{
+            padding: 0%;
+            margin: 0%;
+            box-sizing: border-box;
+        }
+        html, body{
+            height: 100%;
+            width: 100%;
+        }
+        #frm{
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #cal{
+            padding: 70px;
+            height: 300px;
+            width: 300px;
+            border: 2px solid black;
+            
+        }
+        .b{
+            margin-left: 10px;
+           font-size: medium;
+           width: 20px;
+        }
+        .box{
+            margin-left: 50px;
+        }
+    </style>
+</head>
+
+<body>
+<div id ="frm">
+    <div id ="cal">
+        <form>
+            <label for="Number 1">Number 1:</label>
+            <input type="text" id="num1">
+        
+            <label for="Number 2">Number 2:</label>
+            <input type="text" id="num2">
+            <br>    
+            <div id="opr">
+                <input type="button" value="+" class ="b" onclick="calculate('+')">
+                <input type="button" value="-" class ="b" onclick="calculate('-')">
+                <input type="button" value="*" class ="b" onclick="calculate('*')">
+                <input type="button" value="/" class ="b" onclick="calculate('/')">  
+            </div> 
+                <label for="Number 3">Result: </label>
+                <input type="text" id="res" >
+
+        </form>
+    </div>
+</div>
+
+
+    <script>
+        function calculate(operation) {
+            let a = parseFloat(document.getElementById('num1').value);
+            let b = parseFloat(document.getElementById('num2').value);
+            switch(operation){
+                case '+' : document.getElementById("res").value=a+b;
+                break;
+                case '-' : document.getElementById("res").value=a-b;
+                break;
+                case '*' : document.getElementById("res").value=a*b;
+                break;
+                case '/' : document.getElementById("res").value=a/b;
+                break;
+
+            }
+
+        }
+       
+
+    </script>
+</body>
+
+</html>
