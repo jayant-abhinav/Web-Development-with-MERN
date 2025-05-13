@@ -7,7 +7,7 @@
 </head>
 <body>
         <div class="Form">
-            <form action="" method="get" size="20">
+            <form onsubmit="updateid(event)">
                 Name:  <input type="text" size="20"><br><br>
                 Address:  <input type="text" size="20"><br><br>
                 Course: <input type="text" size="20"><br><br>
@@ -24,9 +24,9 @@
                     <option value="AB-">AB-</option>
                 </select><br><br>
                 Emergency Contact Number:  <input type="text"><br><br>
-                Photo: <input type="image" src="" alt="">
+                Upload Image: <input type="file" src="#" accept="/images"><br>
+                <input type="submit" value="Submit">
             </form>
-
         </div>
 </body>
 </html>
